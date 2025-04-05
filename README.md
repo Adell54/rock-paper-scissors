@@ -1,16 +1,16 @@
-# rps
+# Explanation
 
-A new Flutter project.
+Entry Point:
+main() calls runApp(RockPaperScissorsApp()), which sets up a MaterialApp with RockPaperScissorsScreen() as its home.
 
-## Getting Started
+Stateful Widget:
+RockPaperScissorsScreen maintains game state with variables for the players choice and computers choice and their scores.
 
-This project is a starting point for a Flutter application.
+User Interaction:
+When a player taps a button , the playGame() method sets the player choice and randomly selects the computers choice. Then it calls _updateScores() to compare choices and update scores.
 
-A few resources to get you started if this is your first Flutter project:
+UI Updates:
+The choices which are displayed as emojis and scores are shown in text widgets with setState() ensuring the ui reflects any changes.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Reset Functionality:
+a reset button calls _resetGame(), clearing choices and resetting scores.
